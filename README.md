@@ -1,41 +1,4 @@
-# [Angular-Drywall](http://arthurkao.github.io/angular-drywall)
-
-[![Build Status](https://travis-ci.org/arthurkao/angular-drywall.svg?branch=master)](https://travis-ci.org/arthurkao/angular-drywall)
-
-A website and user system, implemented with [MongoDB](https://www.mongodb.org/), [Express](http://expressjs.com/), [AngularJS](https://angularjs.org/) and [Node.js](https://nodejs.org/), a.k.a MEAN stack.
-Inspired by and forked from [Drywall](https://github.com/jedireza/drywall).
-
-## Features
-
- - Versatility because you can
-    - Hack your next awesome MEAN stack web app on top of [Angular-Drywall](http://arthurkao.github.io/angular-drywall), or
-    - Use only the client as a non-trivial AngularJS project starter, or
-    - Use only the sever as a pure User Management JSON API server.
- - Stand alone RESTful API service capable of serving any http clients, including iOS and Android app.
- - Social Login enabled currently for __Facebook__ and __Google__.
- - Fully functional user life cycle management.
- - Admin panel provides full CRUD UI on all database entity.
- - Responsive web design supports Mobile-First Development.
-
-## Technology
-
-[Angular-Drywall](http://arthurkao.github.io/angular-drywall)'s backend is pure Node.js RESTful API Server that renders no html pages . Front-end is built with [AngularJS](https://angularjs.org/), [Bootstrap](https://angular-ui.github.io/bootstrap/) and [SASS](http://sass-lang.com/).
-[Grunt](http://gruntjs.com/) manages various development, testing and production build tasks.
-
-| On The Server  | On The Client | Development |
-|:--------------:|:-------------:|:-----------:|
-| Express        | AngularJS     | Grunt       |
-| Mongo/Mongoose | Bootstrap     | Npm         |
-| Passport       | SASS          | Bower       |
-| EmailJS        | Font-Awesome  | Karma       |
-|                | Moment.js     |             |
-
-
-## Live demo
-
-[http://angular-drywall.arthurkao.io](http://angular-drywall.arthurkao.io)
-Hosted on AWS
-
+Built using [Angular-Drywall](http://arthurkao.github.io/angular-drywall)
 
 ## Requirements
 
@@ -95,42 +58,9 @@ $ grunt
 # [nodemon] starting `node app.js`
 ```
 
-Now [Angular-Drywall](http://arthurkao.github.io/angular-drywall) should be up and running at `http://localhost:3000`.
+Now it should be up and running at `http://localhost:3000`.
 
 Login. Customize. Enjoy.
-
-
-## Philosophy
-
- - MEAN stack web app starter with user management up and running in 5 minutes.
- - Carefully built on top of latest state-of-the-art javascript technologies.
- - RESTful API service that easily serves non-browser (iOS, Android, among others) clients.
- - [Single page web application](http://en.wikipedia.org/wiki/Single-page_application).
-
-
-## Questions and contributing
-
-Any issues or questions (no matter how basic), open an issue. Please take the
-initiative to include basic debugging information like operating system
-and relevant version details such as:
-
-```bash
-$ npm version
-
-#{ 'angular-drywall': '0.1.1,
-#  http_parser: '1.0',
-#  node: '0.10.29',
-#  v8: '3.14.5.9',
-#  ares: '1.9.0-DEV',
-#  uv: '0.10.27',
-#  zlib: '1.2.3',
-#  modules: '11',
-#  openssl: '1.0.1h',
-#  npm: '2.1.7' }
-```
-
-Contributions are welcome.
-
 
 ## License
 
