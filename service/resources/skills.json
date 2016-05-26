@@ -1,0 +1,57 @@
+{
+	"divisions": [{
+		"name": "Offense",
+		"categories": [{
+			"name": "Punches",
+			"types": [{
+				"name": "Jab",
+				"notes": "",
+				"count": 0
+			}, {
+				"name": "Cross",
+				"notes": "",
+				"count": 0
+			}, {
+				"name": "Lead Hook",
+				"notes": "",
+				"count": 0
+			}, {
+				"name": "Rear Hook",
+				"notes": "",
+				"count": 0
+			}, {
+				"name": "Overhand Right",
+				"notes": "",
+				"count": 0
+			}, {
+				"name": "Corkscrew Right",
+				"notes": "",
+				"count": 0
+			}]
+		}, {
+			"name": "Kicks",
+			"types": []
+		}, {
+			"name": "Elbows",
+			"types": []
+		}, {
+			"name": "Knees",
+			"types": []
+		}]
+	}, {
+		"name": "Defense",
+		"categories": [{
+			"name": "Parries",
+			"types": []
+		}, {
+			"name": "Blocks",
+			"types": []
+		}, {
+			"name": "Slips",
+			"types": []
+		}, {
+			"name": "Checks",
+			"types": []
+		}]
+	}]
+}

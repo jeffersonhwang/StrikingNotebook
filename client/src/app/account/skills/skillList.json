@@ -1,0 +1,68 @@
+{
+	"skills": [{
+			"name": "Offense",
+			"categories": [
+				{
+					"name": "Punches",
+					"types": [{ 
+							"name": "Jab", 
+							"count": 0,	
+						},
+						{
+							"name": "Cross",
+							"count": 0,
+						},
+						{
+							"name": "Lead Hook",
+							"count": 0,
+						},
+						{
+							"name": "Rear Hook",
+							"count": 0,
+						},
+						{
+							"name": "Overhand Right",
+							"count": 0,
+						},
+						{
+							"name": "Corkscrew Right",
+							"count": 0,
+						}
+					]
+				},
+				{
+					"name": "Kicks",
+					"types": []
+				},
+				{
+					"name": "Elbows",
+					"types": []
+				},
+				{
+					"name": "Knees",
+					"types": []
+				}
+			]
+		},
+		{
+			"name": "Defense",
+			"categories": [
+				{
+					"name": "Parries",
+					"types": []
+				},
+				{
+					"name": "Blocks",
+					"types": []
+				},
+				{
+					"name": "Slips",
+					"types": []
+				},
+				{
+					"name": "Checks",
+					"types": []
+				},
+			]
+		}]
+}

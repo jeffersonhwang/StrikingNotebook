@@ -1,0 +1,18 @@
+.skills {
+	
+	input {
+		width: 100px;
+	}
+
+	textarea {
+		display: block;
+	}
+
+	li {
+		list-style-type: none;	
+	}
+
+	.notes > * {
+		display: inline-block;
+	}
+}
