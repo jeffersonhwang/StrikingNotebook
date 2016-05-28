@@ -4,13 +4,13 @@ exports = module.exports = function(app, mongoose) {
   var skillsSchema = new mongoose.Schema({
     userId: Number,
     lastModified: { type: Date, default: Date.now },
-    division: [{ 
+    divisions: [{ 
       name: String,
       categories: [{
         name: String,
         types: [{
           name: String,
-          count: Number,
+          mastery: String,
           notes: String
         }]
       }]

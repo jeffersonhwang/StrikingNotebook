@@ -23,7 +23,7 @@ var profile = {
   		userId: req.params.id,
   	};
   	var fieldsToSet= {
-  		division: req.body
+  		divisions: req.body
   	};
   	var options = {
   		new: true,

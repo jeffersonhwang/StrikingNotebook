@@ -9,10 +9,21 @@
 	}
 
 	li {
-		list-style-type: none;	
+		list-style-type: none;
 	}
 
-	.notes > * {
+	.inline > * {
 		display: inline-block;
+	}
+
+
+	.notes {
+		width: 50%;
+		 
+		textarea {
+			width: 100%;
+			height: 135px;
+			resize: none;
+		}
 	}
 }

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "async": "^1.x.x",
+    "angular-xeditable": "^0.1.12",
     "bcryptjs": "~2.3.0",
     "body-parser": "^1.x.x",
     "compression": "^1.x.x",

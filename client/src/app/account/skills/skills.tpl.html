@@ -1,35 +1,35 @@
 <div class="row" id="profile">
     <div class="col-sm-12">
         <div class="page-header"><h1>Skills</h1></div>
-        <div>This is where you can track techniques you've practiced, add new combos you've learned, and write notes.</div>
         <!-- This is a single page app for all skills -->
         <div class="container-fluid ng-scope" ng-controller="SkillsCtrl">
-            <div class="skills" ng-repeat="division in skillDivisions">
+            <div class="skills horizontal" ng-repeat="division in skillDivisions">
                 <h2>{{ division.name }}</h2>
-                <ul>
-                    <li ng-repeat="category in division.categories">
-                        <h3>{{ category.name }}</h3>
+                <tabset>
+                    <tab heading="{{ category.name }}" ng-repeat="category in division.categories">
                         <ul>
                             <li class="skill" ng-repeat="skill in category.types">
-                                <div class="skill-name">
-                                    <label>{{ skill.name }}</label>
+                                <div class="inline">
+                                    <h3 editable-text="skill.name">{{ skill.name }}</h3>
+                                    <select ng-options="mastery for mastery in masteryLevels" ng-model="skill.mastery">
+                                        <option value="">Select a mastery level</option>
+                                    </select>
                                     <!-- Progress bar here-->
                                 </div>
-                                <div class="reps">
-                                    <label>Reps:</label>
-                                    <input type="number" ng-model="skill.count" ng-blur="update(skillDivisions)" />
-                                </div>
                                 <div class="notes">
-                                    <label>Notes:</label>
-                                    <textarea ng-model="skill.notes" ng-blur="update(skillDivisions)">{{ skill.notes }}</textarea>
+                                    <textarea ng-model="skill.notes" placeholder="Add some notes">{{ skill.notes }}</textarea>
                                 </div>
                             </li>
+                            <li>
+                                <add-technique-button></add-technique-button>
+                            </li>
+                            <!-- <button addTechnique></button> -->
                         </ul>
-                    </li>
-                </ul>
+                    </tab>
+                </tabset>
             </div>
             <div>
-                <button type="submit" ng-click="save(skillDivisions)">Save</button>
+                <button type="submit" ng-click="save()">Save</button>
             </div>
         </div>
     </div>

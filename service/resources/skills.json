@@ -6,34 +6,78 @@
 			"types": [{
 				"name": "Jab",
 				"notes": "",
-				"count": 0
+				"mastery": ""
 			}, {
 				"name": "Cross",
 				"notes": "",
-				"count": 0
+				"mastery": ""
 			}, {
-				"name": "Lead Hook",
+				"name": "Left Hook",
 				"notes": "",
-				"count": 0
+				"mastery": ""
 			}, {
-				"name": "Rear Hook",
+				"name": "Right Hook",
 				"notes": "",
-				"count": 0
+				"mastery": ""
 			}, {
 				"name": "Overhand Right",
 				"notes": "",
-				"count": 0
+				"mastery": ""
 			}, {
-				"name": "Corkscrew Right",
+				"name": "Superman Punch",
 				"notes": "",
-				"count": 0
+				"mastery": ""
 			}]
 		}, {
 			"name": "Kicks",
-			"types": []
+			"types": [{
+					"name": "Low Roundhouse Kick",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Mid Roundhouse Kick",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "High Roundhouse Kick",
+					"notes": "",
+					"mastery": ""
+				},  {
+					"name": "Lead Teep",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Rear Teep",
+					"notes": "",
+					"mastery": ""
+				}]
 		}, {
 			"name": "Elbows",
-			"types": []
+			"types": [{
+						"name": "Horizontal Elbow",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name": "Uppercut (Up) Elbow",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name": "Forward Elbow Thrust",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name": "Slashing Elbow",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name": "Diagonal Elbow",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name": "Spinning Back Elbow",
+						"notes": "",
+						"mastery": ""
+					}]
 		}, {
 			"name": "Knees",
 			"types": []

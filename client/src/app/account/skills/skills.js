@@ -1,4 +1,4 @@
-var skills = angular.module('account.skills', ['ngRoute', 'security.authorization']);
+var skills = angular.module('account.skills', ['ngRoute', 'security.authorization', 'xeditable']);
 skills.config(['$routeProvider', 'securityAuthorizationProvider', function($routeProvider, securityAuthorizationProvider){
   $routeProvider
     .when('/account/skills', {
@@ -11,30 +11,18 @@ skills.config(['$routeProvider', 'securityAuthorizationProvider', function($rout
     });
 }]);
 
-// make it into tabs later
-// offense -> Punches, Kicks, Elbows, Knees
- 
-// progress bar for skills
-// skills.directive('ProgressBar', [
-//   function() {
-//     return {
-//       restrict: 'A',
-//       scope: {
-//         ''
-//       },
-//     };
-//   }
-// ]);
-
-skills.controller('SkillsCtrl', ['$scope', '$http', 
-  function($scope, $http) {
+skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions',
+  function($scope, $http, editableOptions) {
     $scope.skillDivisions = [];
+    $scope.masteryLevels = ["Awkward", "Comfortable", "Mastered"];
+
+    // editable options settings
+    editableOptions.theme = 'bs2';
 
     $scope.loadSkills = function() {
-      $http.get('/api/profile/skills/1')
-        .then(function(res) {
-          $scope.skillDivisions = res.data.skills.division;
-        });
+      $http.get('/api/profile/skills/1').then(function(res) {
+        $scope.skillDivisions = res.data.skills.divisions;
+      });
     };
 
     $scope.save = function() {
@@ -49,10 +37,27 @@ skills.controller('SkillsCtrl', ['$scope', '$http',
         });
     };
 
-    $scope.update = function(skills) {
-      $scope.skillDivisions = angular.copy(skills);
-    };
 
     $scope.loadSkills();
   }
-]);
+])
+.directive("addTechniqueButton", function() {
+  return {
+    restrict: "E",
+    replace: true,
+    template: "<button add-technique>Add Technique</button>"
+  };
+})
+.directive("addTechnique", function($compile) {
+  return function($scope, element, attrs) {
+    element.bind("click", function() {
+      $scope.category.types.push({
+        "name": "",
+        "notes": "",
+        "mastery": ""
+      });
+      $scope.$apply();
+      console.log("Added a new type!");
+    });
+  };
+});
