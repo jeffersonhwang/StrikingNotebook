@@ -31,23 +31,51 @@
 		}, {
 			"name": "Kicks",
 			"types": [{
-					"name": "Low Roundhouse Kick",
+					"name": "Low Kick",
 					"notes": "",
 					"mastery": ""
 				}, {
-					"name": "Mid Roundhouse Kick",
+					"name": "Body Kick",
 					"notes": "",
 					"mastery": ""
 				}, {
-					"name": "High Roundhouse Kick",
+					"name": "Head Kick",
 					"notes": "",
 					"mastery": ""
-				},  {
+				}, {
+					"name": "Straight Kick",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Half-Shin, Half-Knee Kick",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Axe Kick",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Jump Kick",
+					"notes": "",
+					"mastery": ""
+				}, {
 					"name": "Lead Teep",
 					"notes": "",
 					"mastery": ""
 				}, {
 					"name": "Rear Teep",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Side Teep",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Jumping Teep",
+					"notes": "",
+					"mastery": ""
+				}, {
+					"name": "Slapping Teep",
 					"notes": "",
 					"mastery": ""
 				}]
@@ -80,22 +108,86 @@
 					}]
 		}, {
 			"name": "Knees",
-			"types": []
+			"types": [{
+						"name":"Straight Knee",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name":"Diagonal Knee",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name":"Side Knee",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name":"Curving Knee",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name":"Jumping Knee",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name":"Flying Knee",
+						"notes": "",
+						"mastery": ""
+					}, {
+						"name":"Step Up Knee",
+						"notes": "",
+						"mastery": ""
+					}]
 		}]
 	}, {
 		"name": "Defense",
 		"categories": [{
 			"name": "Parries",
-			"types": []
+			"types": [{
+						"name": "Parry the Jab",
+						"notes": "",
+						"mastery": ""
+					}]
 		}, {
 			"name": "Blocks",
-			"types": []
+			"types": [{
+						"name": "Figure Four Block",
+						"notes": "",
+						"mastery": ""
+					}]
 		}, {
 			"name": "Slips",
-			"types": []
+			"types": [{
+						"name": "Slip the Jab",
+						"notes": "",
+						"mastery": ""
+					}]
 		}, {
 			"name": "Checks",
-			"types": []
+			"types": [{
+						"name": "Lead Leg Check",
+						"notes": "",
+						"mastery": ""
+					}]
+		}]
+	}, {
+		"name": "Clinch",
+		"categories": [{
+			"name": "Clinches",
+			"types": [{
+				"name": "Body Lock",
+				"notes": "",
+				"mastery": ""
+			}]
+		}, {
+			"name": "Throws",
+			"types": [{
+
+			}]
+		}, {
+			"name": "Sweeps",
+			"types": [{
+
+			}]
 		}]
 	}]
 }

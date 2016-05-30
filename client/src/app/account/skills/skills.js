@@ -1,4 +1,4 @@
-var skills = angular.module('account.skills', ['ngRoute', 'security.authorization', 'xeditable']);
+var skills = angular.module('account.skills', ['ngRoute', 'security.authorization', 'xeditable', 'services.accountResource']);
 skills.config(['$routeProvider', 'securityAuthorizationProvider', function($routeProvider, securityAuthorizationProvider){
   $routeProvider
     .when('/account/skills', {
@@ -11,22 +11,27 @@ skills.config(['$routeProvider', 'securityAuthorizationProvider', function($rout
     });
 }]);
 
-skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions',
-  function($scope, $http, editableOptions) {
+skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions', 'accountResource',
+  function($scope, $http, editableOptions, accountResource) {
+    $scope.searchText = '';
     $scope.skillDivisions = [];
     $scope.masteryLevels = ["Awkward", "Comfortable", "Mastered"];
 
+    var userId = 1;
     // editable options settings
     editableOptions.theme = 'bs2';
 
     $scope.loadSkills = function() {
-      $http.get('/api/profile/skills/1').then(function(res) {
-        $scope.skillDivisions = res.data.skills.divisions;
+      accountResource.getAccountDetails().then(function(res) {
+        userId = res.account._id;
+        $http.get('/api/profile/skills/' + userId).then(function(res) {
+          $scope.skillDivisions = res.data.skills.divisions;
+        });
       });
     };
 
     $scope.save = function() {
-      $http.put('/api/profile/skills/1', $scope.skillDivisions)
+      $http.put('/api/profile/skills/' + userId, $scope.skillDivisions)
         .then(function(res) {
           if (res.status === 200) {
             console.log("Saved!");
@@ -36,7 +41,6 @@ skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions',
           }
         });
     };
-
 
     $scope.loadSkills();
   }
@@ -52,7 +56,7 @@ skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions',
   return function($scope, element, attrs) {
     element.bind("click", function() {
       $scope.category.types.push({
-        "name": "",
+        "name": "Technique",
         "notes": "",
         "mastery": ""
       });

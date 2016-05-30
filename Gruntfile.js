@@ -57,6 +57,10 @@ module.exports = function(grunt) {
           {
             expand: true, cwd: 'client/bower_components/moment/',
             src: ['moment.js'], dest: '<%= distdir %>/vendor/'
+          },
+          {
+            expand: true, cwd: 'client/bower_components/angular-xeditable/dist/js/',
+            src: ['xeditable.js'], dest: '<%= distdir %>/vendor/'
           }
         ]
       },
@@ -117,7 +121,8 @@ module.exports = function(grunt) {
           loadPath: '.'
         },
         files: {
-          '<%= distdir %>/css/style.css': 'client/src/assets/sass/style.scss'
+          '<%= distdir %>/css/style.css': 'client/src/assets/sass/style.scss',
+          '<%= distdir %>/css/xeditable.css': 'client/bower_components/angular-xeditable/dist/css/xeditable.css'
         }
       }
     },

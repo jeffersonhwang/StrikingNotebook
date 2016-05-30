@@ -37,11 +37,8 @@ var profile = {
   			console.log("ERROR!" + err);
   			next(err);
   		}
-
-  		if (doc)
-  			res.status(200);
-  		else
-  			res.status(400);
+      
+      res.sendStatus(doc ? 200 : 400);
   	});
   
 }

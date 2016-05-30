@@ -2,7 +2,7 @@
 
 exports = module.exports = function(app, mongoose) {
   var skillsSchema = new mongoose.Schema({
-    userId: Number,
+    userId: {type: mongoose.Schema.ObjectId, ref: 'Account'},
     lastModified: { type: Date, default: Date.now },
     divisions: [{ 
       name: String,

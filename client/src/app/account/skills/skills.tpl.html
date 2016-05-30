@@ -1,18 +1,19 @@
 <div class="row" id="profile">
     <div class="col-sm-12">
-        <div class="page-header"><h1>Skills</h1></div>
+        <div class="page-header"><h1>Individual Techniques</h1></div>
         <!-- This is a single page app for all skills -->
         <div class="container-fluid ng-scope" ng-controller="SkillsCtrl">
-            <div class="skills horizontal" ng-repeat="division in skillDivisions">
+            <input class="search" ng-model="searchText">
+            <div class="skills horizontal" ng-repeat="division in skillDivisions | filter: { categories: { types: { name:searchText } } }">
                 <h2>{{ division.name }}</h2>
                 <tabset>
-                    <tab heading="{{ category.name }}" ng-repeat="category in division.categories">
+                    <tab heading="{{ category.name }}" ng-repeat="category in division.categories | filter:{ types: { name:searchText } }">
                         <ul>
-                            <li class="skill" ng-repeat="skill in category.types">
-                                <div class="inline">
-                                    <h3 editable-text="skill.name">{{ skill.name }}</h3>
+                            <li class="skill" ng-repeat="skill in category.types | filter:searchText">
+                                <div>
+                                    <h4 editable-text="skill.name">{{ skill.name }}</h4>
                                     <select ng-options="mastery for mastery in masteryLevels" ng-model="skill.mastery">
-                                        <option value="">Select a mastery level</option>
+                                        <option value="">Select your mastery</option>
                                     </select>
                                     <!-- Progress bar here-->
                                 </div>
@@ -23,7 +24,6 @@
                             <li>
                                 <add-technique-button></add-technique-button>
                             </li>
-                            <!-- <button addTechnique></button> -->
                         </ul>
                     </tab>
                 </tabset>
