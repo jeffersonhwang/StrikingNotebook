@@ -1,9 +1,9 @@
 <div class="row" id="profile">
     <div class="col-sm-12">
-        <div class="page-header"><h1>Individual Techniques</h1></div>
+        <div class="page-header"><h1>Skills</h1></div>
         <!-- This is a single page app for all skills -->
         <div class="container-fluid ng-scope" ng-controller="SkillsCtrl">
-            <input class="search" ng-model="searchText">
+            <input class="search" ng-model="searchText" placeholder="Search for a skill">
             <div class="skills horizontal" ng-repeat="division in skillDivisions | filter: { categories: { types: { name:searchText } } }">
                 <h2>{{ division.name }}</h2>
                 <tabset>

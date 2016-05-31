@@ -4,7 +4,8 @@ input.search {
 }
 
 .skills {
-	width: 33%;
+	width: 30%;
+	margin-right: 3%;
 	display: inline-block;
 	vertical-align: top;
 
@@ -27,7 +28,11 @@ input.search {
 
 	button {
 		margin-top: 8px;
-		margin-bottom: 10px
+		margin-bottom: 10px;
+	}
+
+	.skill form.editable-text {
+		margin-top: 10px;
 	}
 }
 

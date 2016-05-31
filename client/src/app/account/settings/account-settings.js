@@ -138,11 +138,7 @@ angular.module('account.settings').controller('AccountSettingsCtrl', [ '$scope',
     };
     $scope.userDetail = {
       first:  account.name.first,
-      middle: account.name.middle,
-      last:   account.name.last,
-      company:account.company,
-      phone:  account.phone,
-      zip:    account.zip
+      last:   account.name.last
     };
     $scope.user = {
       username: user.username,
