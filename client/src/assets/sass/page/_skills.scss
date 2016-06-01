@@ -3,11 +3,9 @@ input.search {
 	display: block;
 }
 
-.skills {
-	width: 30%;
-	margin-right: 3%;
-	display: inline-block;
-	vertical-align: top;
+.skills-wrapper {
+
+	list-style-type: none;
 
 	textarea {
 		display: block;
@@ -20,7 +18,7 @@ input.search {
 	.notes {
 
 		textarea {
-			width: 100%;
+			width: 50%;
 			height: 135px;
 			resize: none;
 		}
@@ -31,8 +29,20 @@ input.search {
 		margin-bottom: 10px;
 	}
 
-	.skill form.editable-text {
-		margin-top: 10px;
+	.skill-category {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	
+	.skill 
+	{
+		h4 {
+			width: 50%;
+		}
+
+		form.editable-text {
+			margin-top: 10px;
+		}
 	}
 }
 

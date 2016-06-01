@@ -2,32 +2,33 @@
     <div class="col-sm-12">
         <div class="page-header"><h1>Skills</h1></div>
         <!-- This is a single page app for all skills -->
-        <div class="container-fluid ng-scope" ng-controller="SkillsCtrl">
+        <div class="skills-wrapper container-fluid ng-scope" ng-controller="SkillsCtrl">
             <input class="search" ng-model="searchText" placeholder="Search for a skill">
-            <div class="skills horizontal" ng-repeat="division in skillDivisions | filter: { categories: { types: { name:searchText } } }">
-                <h2>{{ division.name }}</h2>
-                <tabset>
-                    <tab heading="{{ category.name }}" ng-repeat="category in division.categories | filter:{ types: { name:searchText } }">
-                        <ul>
-                            <li class="skill" ng-repeat="skill in category.types | filter:searchText">
-                                <div>
-                                    <h4 editable-text="skill.name">{{ skill.name }}</h4>
-                                    <select ng-options="mastery for mastery in masteryLevels" ng-model="skill.mastery">
-                                        <option value="">Select your mastery</option>
-                                    </select>
-                                    <!-- Progress bar here-->
-                                </div>
-                                <div class="notes">
-                                    <textarea ng-model="skill.notes" placeholder="Add some notes">{{ skill.notes }}</textarea>
-                                </div>
-                            </li>
-                            <li>
-                                <add-technique-button></add-technique-button>
-                            </li>
-                        </ul>
-                    </tab>
-                </tabset>
-            </div>
+            <tabset type="pills">
+                <tab heading="{{ division.name }}" class="skill-category horizontal" ng-repeat="division in skillDivisions | filter: { categories: { types: { name:searchText } } }">
+                    <tabset>
+                        <tab heading="{{ category.name }}" ng-repeat="category in division.categories | filter:{ types: { name:searchText } }">
+                            <ul>
+                                <li class="skill" ng-repeat="skill in category.types | filter:searchText">
+                                    <div>
+                                        <h4 editable-text="skill.name">{{ skill.name }}</h4>
+                                        <select ng-options="mastery for mastery in masteryLevels" ng-model="skill.mastery">
+                                            <option value="">Select your mastery</option>
+                                        </select>
+                                        <!-- Progress bar here-->
+                                    </div>
+                                    <div class="notes">
+                                        <textarea ng-model="skill.notes" placeholder="Add some notes">{{ skill.notes }}</textarea>
+                                    </div>
+                                </li>
+                                <li>
+                                    <add-technique-button></add-technique-button>
+                                </li>
+                            </ul>
+                        </tab>
+                    </tabset>
+                </tab>
+            </tabset>
             <div>
                 <button type="submit" ng-click="save()">Save</button>
             </div>
