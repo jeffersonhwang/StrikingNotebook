@@ -1,193 +1,327 @@
 {
-	"divisions": [{
-		"name": "Offense",
-		"categories": [{
-			"name": "Punches",
-			"types": [{
-				"name": "Jab",
-				"notes": "",
-				"mastery": ""
-			}, {
-				"name": "Cross",
-				"notes": "",
-				"mastery": ""
-			}, {
-				"name": "Left Hook",
-				"notes": "",
-				"mastery": ""
-			}, {
-				"name": "Right Hook",
-				"notes": "",
-				"mastery": ""
-			}, {
-				"name": "Overhand Right",
-				"notes": "",
-				"mastery": ""
-			}, {
-				"name": "Superman Punch",
-				"notes": "",
-				"mastery": ""
-			}]
-		}, {
-			"name": "Kicks",
-			"types": [{
-					"name": "Low Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Body Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Head Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Straight Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Half-Shin, Half-Knee Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Axe Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Jump Kick",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Lead Teep",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Rear Teep",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Side Teep",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Jumping Teep",
-					"notes": "",
-					"mastery": ""
-				}, {
-					"name": "Slapping Teep",
-					"notes": "",
-					"mastery": ""
-				}]
-		}, {
-			"name": "Elbows",
-			"types": [{
-						"name": "Horizontal Elbow",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name": "Uppercut (Up) Elbow",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name": "Forward Elbow Thrust",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name": "Slashing Elbow",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name": "Diagonal Elbow",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name": "Spinning Back Elbow",
-						"notes": "",
-						"mastery": ""
-					}]
-		}, {
-			"name": "Knees",
-			"types": [{
-						"name":"Straight Knee",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name":"Diagonal Knee",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name":"Side Knee",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name":"Curving Knee",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name":"Jumping Knee",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name":"Flying Knee",
-						"notes": "",
-						"mastery": ""
-					}, {
-						"name":"Step Up Knee",
-						"notes": "",
-						"mastery": ""
-					}]
-		}]
-	}, {
-		"name": "Defense",
-		"categories": [{
-			"name": "Parries",
-			"types": [{
-						"name": "Parry the Jab",
-						"notes": "",
-						"mastery": ""
-					}]
-		}, {
-			"name": "Blocks",
-			"types": [{
-						"name": "Figure Four Block",
-						"notes": "",
-						"mastery": ""
-					}]
-		}, {
-			"name": "Slips",
-			"types": [{
-						"name": "Slip the Jab",
-						"notes": "",
-						"mastery": ""
-					}]
-		}, {
-			"name": "Checks",
-			"types": [{
-						"name": "Lead Leg Check",
-						"notes": "",
-						"mastery": ""
-					}]
-		}]
-	}, {
-		"name": "Clinch",
-		"categories": [{
-			"name": "Clinches",
-			"types": [{
-				"name": "Body Lock",
-				"notes": "",
-				"mastery": ""
-			}]
-		}, {
-			"name": "Throws",
-			"types": [{
+  "divisions": [
+    {
+      "name": "Offense",
+      "categories": [
+        {
+          "name": "Punches",
+          "types": [
+            {
+              "name": "Jab",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Cross",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Left Hook",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Right Hook",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Overhand Right",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Superman Punch",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Kicks",
+          "types": [
+            {
+              "name": "Low Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Body Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Head Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Switch Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Straight Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Half-Shin, Half-Knee Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Axe Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Jump Kick",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Lead Teep",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Rear Teep",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Side Teep",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Jumping Teep",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Slapping Teep",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Elbows",
+          "types": [
+            {
+              "name": "Horizontal Elbow",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Uppercut (Up) Elbow",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Forward Elbow Thrust",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Slashing Elbow",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Diagonal Elbow",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Spinning Back Elbow",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Knees",
+          "types": [
+            {
+              "name": "Straight Knee",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Diagonal Knee",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Side Knee",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Curving Knee",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Jumping Knee",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Flying Knee",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Step Up Knee",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Sweeps",
+          "types": [
+            {
 
-			}]
-		}, {
-			"name": "Sweeps",
-			"types": [{
-
-			}]
-		}]
-	}]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Defense",
+      "categories": [
+        {
+          "name": "Parries",
+          "types": [
+            {
+              "name": "Parry the Jab",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Parry the Straight",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Parry the Rear Kick",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Blocks",
+          "types": [
+            {
+              "name": "Figure Four Block",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Lead Leg Check",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Rear Leg",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Dodges",
+          "types": [
+            {
+              "name": "Slip the Jab",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Slip the Straight",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Roll under the Hook",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clinch",
+      "categories": [
+        {
+          "name": "Positions",
+          "types": [
+            {
+              "name": "Body Lock",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "Full Plum",
+              "notes": "",
+              "mastery": ""
+            },
+            {
+              "name": "50/50",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        },
+        {
+          "name": "Throws",
+          "types": [
+            {
+              "name": "Push and Pull Throw",
+              "notes": "",
+              "mastery": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+    	"name": "Footwork",
+    	"categories": [
+    		{
+    			"name": "Linear",
+    			"types": [
+    				{
+		              "name": "Step and Drag",
+		              "notes": "",
+		              "mastery": ""
+    				},
+    				{
+		              "name": "Bouncing Step",
+		              "notes": "",
+		              "mastery": ""
+    				}
+				]
+    		}, 
+    		{
+    			"name": "Angular",
+    			"types": [
+    				{
+		              "name": "Step and Pivot",
+		              "notes": "",
+		              "mastery": ""
+    				}
+				]
+    		}
+    	]
+    }
+  ]
 }
