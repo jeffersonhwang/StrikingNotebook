@@ -11,15 +11,17 @@ skills.config(['$routeProvider', 'securityAuthorizationProvider', function($rout
     });
 }]);
 
-skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions', 'accountResource',
-  function($scope, $http, editableOptions, accountResource) {
+skills.controller('SkillsCtrl', ['$scope', '$http', '$timeout', 'editableOptions', 'accountResource',
+  function($scope, $http, $timeout, editableOptions, accountResource) {
     $scope.searchText = '';
     $scope.skillDivisions = [];
     $scope.masteryLevels = ["Awkward", "Comfortable", "Mastered"];
+    $scope.saved = null;
 
     var userId = 1;
     // editable options settings
-    editableOptions.theme = 'bs2';
+    editableOptions.theme = 'bs3';
+    editableOptions.icon_set = 'font-awesome';
 
     $scope.loadSkills = function() {
       accountResource.getAccountDetails().then(function(res) {
@@ -33,13 +35,17 @@ skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions', 'accountR
     $scope.save = function() {
       $http.put('/api/profile/skills/' + userId, $scope.skillDivisions)
         .then(function(res) {
-          if (res.status === 200) {
-            console.log("Saved!");
-          }
-          else {
-            console.log("Failed to save!");
-          }
+          $scope.saved = res.status === 200;
+
+          $timeout(function() {
+            $scope.saved = !$scope.saved;
+            $scope.$apply();
+          }, 2500);
         });
+    };
+
+    $scope.removeSkill = function(rootIndex, parentIndex, index) {
+      $scope.skillDivisions[rootIndex].categories[parentIndex].types.splice(index, 1);
     };
 
     $scope.loadSkills();
@@ -49,7 +55,7 @@ skills.controller('SkillsCtrl', ['$scope', '$http', 'editableOptions', 'accountR
   return {
     restrict: "E",
     replace: true,
-    template: "<button add-technique>Add Technique</button>"
+    template: "<button add-technique class=\"btn btn-info\">Add Technique</button>"
   };
 })
 .directive("addTechnique", function($compile) {

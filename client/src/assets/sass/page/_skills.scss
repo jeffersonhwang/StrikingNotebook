@@ -1,52 +1,69 @@
-input.search {
-	width: 300px;
-	display: block;
-}
-
 .skills-wrapper {
-
 	list-style-type: none;
-
-	textarea {
-		display: block;
-	}
 
 	li {
 		list-style-type: none;
 	}
+}
 
-	.notes {
 
+@media (min-width: $screen-md-min) {
+	input.search {
+		width: 300px;
+		display: block;
+	}
+
+	.skills-wrapper {
 		textarea {
+			display: block;
+		}
+
+		.notes {
 			width: 50%;
 			height: 135px;
 			resize: none;
 		}
-	}
 
-	button {
-		margin-top: 8px;
-		margin-bottom: 10px;
-	}
-
-	.skill-category {
-		margin-top: 20px;
-		margin-bottom: 30px;
-	}
-	
-	.skill 
-	{
-		h4 {
-			width: 50%;
+		button {
+			margin-top: 8px;
+			margin-bottom: 10px;
 		}
 
-		form.editable-text {
-			margin-top: 10px;
+		.skill-category {
+			margin-top: 20px;
+			margin-bottom: 30px;
 		}
+		
+		.skill {
+			h4 {
+				width: 50%;
+			}
+
+			form.editable-text {
+				display: block;
+				margin-top: 10px;
+			}
+		}
+
+		.editable-buttons {
+			vertical-align: baseline;
+		}
+
+		select {
+			margin-bottom: 10px;
+		}
+	}
+
+	.editable-click {
+		border: dashed 1px #428bca;
+		line-height: 19.8px;
 	}
 }
 
-.editable-click {
-	border: dashed 1px #428bca;
-	line-height: 19.8px;
+.remove-skill {
+	position: relative;
+	left: -20px;
+	float: left;
+	font-size: 18px;
+	cursor: pointer;
 }
