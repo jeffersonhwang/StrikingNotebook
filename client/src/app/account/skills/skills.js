@@ -45,7 +45,13 @@ skills.controller('SkillsCtrl', ['$scope', '$http', '$timeout', 'editableOptions
     };
 
     $scope.removeSkill = function(rootIndex, parentIndex, index) {
-      $scope.skillDivisions[rootIndex].categories[parentIndex].types.splice(index, 1);
+      var skillTypes = $scope.skillDivisions[rootIndex].categories[parentIndex].types;
+      skillTypes.splice(index, 1);
+
+      // Hack - after removing push an empty object on so the parent tab will display
+      if (skillTypes.length === 0) {
+        $scope.skillDivisions[rootIndex].categories[parentIndex].types.push({});
+      }
     };
 
     $scope.loadSkills();
@@ -61,7 +67,16 @@ skills.controller('SkillsCtrl', ['$scope', '$http', '$timeout', 'editableOptions
 .directive("addTechnique", function($compile) {
   return function($scope, element, attrs) {
     element.bind("click", function() {
-      $scope.category.types.push({
+      /* Hack - when removing the first actual skill
+       * that is not an empty object, (empty object for tab to display)
+       * angular thinks that the actual skill's index is 0 instead of 1 
+       */
+      var typeArray = $scope.category.types;
+      if (typeArray.length === 1 && angular.equals({}, typeArray[0])) {
+        typeArray.splice(0, 1);
+      }
+
+      typeArray.push({
         "name": "Technique",
         "notes": "",
         "mastery": ""
