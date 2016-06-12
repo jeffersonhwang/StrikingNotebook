@@ -73,6 +73,9 @@ app.locals.copyrightYear = new Date().getFullYear();
 app.locals.copyrightName = app.config.companyName;
 app.locals.cacheBreaker = 'br34k-01';
 
+// user activity interceptor 
+app.use(require('./service/activity').intercept);
+
 //setup passport
 require('./passport')(app, passport);
 

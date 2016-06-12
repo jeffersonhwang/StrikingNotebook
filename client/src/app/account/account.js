@@ -1,4 +1,4 @@
-angular.module('account.index', ['ngRoute', 'security.authorization']);
+angular.module('account.index', ['ngRoute', 'security.authorization', 'services.accountResource']);
 angular.module('account.index').config(['$routeProvider', 'securityAuthorizationProvider', function($routeProvider, securityAuthorizationProvider){
   $routeProvider
     .when('/account', {
@@ -10,7 +10,15 @@ angular.module('account.index').config(['$routeProvider', 'securityAuthorization
       }
     });
 }]);
-angular.module('account.index').controller('AccountCtrl', [ '$scope',
-  function($scope){
-    
+angular.module('account.index').controller('AccountCtrl', [ '$scope', 'accountResource',
+  function($scope, accountResource){
+    $scope.recentActivity = [];
+
+    $scope.loadActivity = function() {
+      accountResource.getRecentActivity().then(function(res) {
+        $scope.recentActivity = res.activity;
+      });
+    };
+
+    $scope.loadActivity();
   }]);

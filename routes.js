@@ -86,6 +86,9 @@ exports = module.exports = function(app, passport) {
   app.get('/api/account/settings/google/disconnect', account.disconnectGoogle);
   app.get('/api/account/settings/facebook/callback', account.connectFacebook);
   app.get('/api/account/settings/facebook/disconnect', account.disconnectFacebook);
+  
+  // account > (recent) activity
+  app.get('/api/account/activity/', profile.getRecentActivity);
 
   //-----athorization required api-----
   app.all('/api/admin*', apiEnsureAuthenticated);
@@ -153,8 +156,8 @@ exports = module.exports = function(app, passport) {
 
   //profile > skills
   app.get('/api/profile/skills/:id', profile.getSkills);
-  // app.post('/api/profile/skills', profile.createSkills);
   app.put('/api/profile/skills/:id', profile.saveSkills);
+
 
   //******** END OF NEW JSON API ********
 

@@ -49,5 +49,9 @@ angular.module('services.accountResource', ['security.service']).factory('accoun
         return data;
       });
   };
+
+  resource.getRecentActivity = function() {
+    return $http.get(baseUrl + '/account/activity').then(processResponse, processError);
+  };
   return resource;
 }]);

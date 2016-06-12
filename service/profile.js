@@ -8,8 +8,6 @@ var profile = {
   getSkills: function(req, res, next) {
   	var query = { userId: req.params.id };
   	req.app.db.models.Skills.findOne(query, function(err, found) {
-  		console.log(found);
-
   		if (err) 
   			next(err);
   		if (!found)
@@ -29,10 +27,8 @@ var profile = {
   		new: true,
   		upsert: true
   	};
-  	console.log(fieldsToSet);
-  	console.log(query);
-  	req.app.db.models.Skills.findOneAndUpdate(query, fieldsToSet, options, function(err, doc){
-  		console.log(doc);
+
+  	req.app.db.models.Skills.findOneAndUpdate(query, fieldsToSet, options, function(err, doc) {
   		if (err) {
   			console.log("ERROR!" + err);
   			next(err);
@@ -40,9 +36,20 @@ var profile = {
       
       res.sendStatus(doc ? 200 : 400);
   	});
-  
-}
+  },
+  getRecentActivity: function(req, res, next) {
+    console.log(req.user.id);
+    req.app.db.models.Activity.find({ userId: req.user.id })
+      .sort({ lastModified: -1 })
+      .limit(15)
+      .exec(function(err, activity) {
+        if (err) {
+          next(err);
+        }
 
+        res.status(200).json({ "activity": activity });
+      });
+  }
 
 };
 

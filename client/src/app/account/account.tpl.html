@@ -42,9 +42,13 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
-      <h2>Recenty Activity</h2>
-      <div> <!-- Bind to a history schema..get like latest 10 modifications -->
-          
-      </div>  
+        <h2>Recenty Activity</h2>
+        <div> <!-- Bind to a history schema..get like latest 10 modifications -->
+            <div ng-repeat="activity in recentActivity">
+                <span>{{ activity.lastModified | date:'MM-dd-yyyy'}}</span>
+                <span>{{ activity.action.verb }}</span>
+                <span>{{ activity.action.actionItem }}</span>
+            </div>
+        </div>  
     </div>
 </div>
