@@ -28,3 +28,13 @@ select, textarea, input, .form-control {
   color: #7f7f7f;
   font-size: 20em;
 }
+
+.glyphicon {
+  @extend .fa;
+  &.glyphicon-chevron-right {
+    @extend .fa-chevron-right;
+  }
+  &.glyphicon-chevron-left {
+    @extend .fa-chevron-left;
+  }
+}
