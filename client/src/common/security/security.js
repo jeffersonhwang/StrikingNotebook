@@ -5,7 +5,7 @@ angular.module('security.service', [
   'ui.bootstrap.modal'     // Used to display the login form as a modal dialog.
 ])
 
-.factory('security', ['$http', '$q', '$location', 'securityRetryQueue', '$modal', function($http, $q, $location, queue, $modal) {
+.factory('security', ['$http', '$q', '$location', 'securityRetryQueue', '$uibModal', function($http, $q, $location, queue, $uibModal) {
 
   // Redirect to the given url (defaults to '/')
   function redirect(url) {
@@ -21,7 +21,7 @@ angular.module('security.service', [
     }
     //loginDialog = $modal.dialog();
     //loginDialog.open('security/login/form.tpl.html', 'LoginFormController').then(onLoginDialogClose);
-    loginDialog = $modal.open({
+    loginDialog = $uibModal.open({
       templateUrl: 'security/login/form.tpl.html',
       controller: 'LoginFormController'
     });
