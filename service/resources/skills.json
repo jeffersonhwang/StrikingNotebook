@@ -255,6 +255,14 @@
               "mastery": ""
             }
           ]
+        },
+        {
+        	"name": "Catches",
+        	"types": [
+        		{
+        			
+        		}
+        	]
         }
       ]
     },
@@ -290,6 +298,14 @@
               "mastery": ""
             }
           ]
+        },
+        {
+        	"name": "Escapes",
+        	"types": [
+        		{
+
+        		}
+        	]
         }
       ]
     },
