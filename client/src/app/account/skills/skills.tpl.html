@@ -4,10 +4,10 @@
         <!-- This is a single page app for all skills -->
         <div class="skills-wrapper container-fluid ng-scope" ng-controller="SkillsCtrl">
             <input class="search" ng-model="searchText" placeholder="Search for a skill">
-            <tabset type="pills">
-                <tab heading="{{ division.name }}" class="skill-category horizontal" ng-repeat="division in skillDivisions | filter: { categories: { types: { name:searchText } } }">
-                    <tabset>
-                        <tab heading="{{ category.name }}" ng-repeat="category in division.categories | filter:{ types: { name:searchText } }">
+            <uib-tabset type="pills">
+                <uib-tab heading="{{ division.name }}" class="skill-category horizontal" ng-repeat="division in skillDivisions | filter: { categories: { types: { name:searchText } } }">
+                    <uib-tabset>
+                        <uib-tab heading="{{ category.name }}" ng-repeat="category in division.categories | filter:{ types: { name:searchText } }">
                             <ul>
                                 <li class="skill" ng-repeat="skill in category.types | filter:searchText">
                                     <a class="remove-skill" href="" ng-click="removeSkill($parent.$parent.$index, $parent.$index, $index)">
