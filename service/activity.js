@@ -22,7 +22,7 @@ var activity = {
   	var method = req.originalMethod;
   	var actionVerb = translateToActionVerb(method);
 
-  	if (actionVerb !== null) {
+  	if (actionVerb !== null && req.user !== undefined) {
   		console.log("Intercepted " + actionVerb + "!");
 
 	  	var Activity = req.app.db.models.Activity;
