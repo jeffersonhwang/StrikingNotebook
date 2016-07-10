@@ -1,7 +1,7 @@
 {
-  "name": "Muay Thai Notebook",
+  "name": "MuayThaiNotebook",
   "description": "A notebook web app for Muay Thai",
-  "version": "1.0",
+  "version": "1.0.0",
   "keywords": [
     "Muay",
     "Thai",
